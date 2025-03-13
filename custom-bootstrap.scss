@@ -23,15 +23,31 @@ $border-widths: map-merge(
   )
 );
 
-$new-bs-btn-padding-x: 2.5rem; /* Padding orizzontale */
-$new-btn-padding-y: 0.75rem; /* Padding verticale */
-
-$btn-padding: map.merge(
-  $btn-padding,
-  (
-    y: $btn-padding-y,
-    x: $btn-padding-x,
-  )
+$btn-padding: (
+  y: 0.75rem,
+  // Vertical padding
+  x: 2.5rem,
+  // Horizontal padding
 );
+
+$new-danger: #ff0077;
+$new-info: #00ffea;
+$new-light: #f3eeff;
+$epicode-1: #5726c3;
+$epicode-2: #8625a5;
+$epicode-3: #cb2376;
+
+$new-theme-colors: (
+  "danger": $new-danger,
+  "info": $new-info,
+  "light": $new-light,
+  "epicode-1": $epicode-1,
+  "epicode-2": $epicode-2,
+  "epicode-3": $epicode-3,
+);
+
+$theme-colors: map-merge($theme-colors, $new-theme-colors);
+
+$btn-border-radius: 50rem;
 
 @import "Assets/scss/bootstrap.scss";
