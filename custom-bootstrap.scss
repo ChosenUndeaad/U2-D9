@@ -23,4 +23,15 @@ $border-widths: map-merge(
   )
 );
 
-@import "Assets/scss/bootstrap";
+$new-bs-btn-padding-x: 2.5rem; /* Padding orizzontale */
+$new-btn-padding-y: 0.75rem; /* Padding verticale */
+
+$btn-padding: map.merge(
+  $btn-padding,
+  (
+    y: $btn-padding-y,
+    x: $btn-padding-x,
+  )
+);
+
+@import "Assets/scss/bootstrap.scss";
